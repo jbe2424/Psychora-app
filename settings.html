@@ -2,77 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Psychora</title>
+  <title>Psychora · Settings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="theme-light">
+<body>
   <div class="app-shell">
-<main class="screen screen-settings">
-  <header class="app-header">
-    <h1 class="app-title">Settings</h1>
-    <p class="app-subtitle">Courses, import, theme</p>
-  </header>
+    <main>
+      <!-- Header -->
+      <header class="app-header">
+        <div class="app-title-row">
+          <div class="app-title-block">
+            <h1 class="app-title">Psychora</h1>
+            <p class="app-tagline">Intro to psychology</p>
+          </div>
+          <div class="app-chip">Settings</div>
+        </div>
+      </header>
 
-  <section class="content settings-content">
-    <section class="settings-section">
-      <h2 class="settings-heading">Course</h2>
-      <p class="settings-text">Current course: <strong>Psychology 2e – Intro</strong></p>
-      <button class="btn-secondary">Manage courses</button>
-    </section>
+      <section class="content">
+        <!-- Course card -->
+        <article class="card card-primary">
+          <p class="section-label">Course</p>
+          <h2 class="card-title">Current course</h2>
+          <p class="card-subtitle">
+            <span class="card-subtitle-emphasis">Psychology 2e – Intro</span>
+          </p>
+          <p class="card-body-text">
+            Later you’ll be able to switch courses and see separate stats for each one.
+          </p>
+        </article>
 
-    <section class="settings-section">
-      <h2 class="settings-heading">Bulk import</h2>
-      <p class="settings-text">Upload a CSV with columns: course, chapter_title, term, definition.</p>
-      <button class="btn-secondary">Import terms</button>
-    </section>
+        <!-- Bulk import card (visual only for now) -->
+        <article class="card card-accent-mauve">
+          <p class="section-label">Bulk import</p>
+          <h2 class="card-title">Import terms (coming soon)</h2>
+          <p class="card-body-text">
+            You’ll be able to upload a CSV with:
+            <br />course, chapter_title, term, definition.
+          </p>
+        </article>
 
-    <section class="settings-section">
-      <h2 class="settings-heading">Theme</h2>
-      <div class="theme-toggle-row">
-        <span class="settings-text">Appearance:</span>
-        <button class="btn-toggle btn-toggle-active" data-theme="light">Light</button>
-        <button class="btn-toggle" data-theme="dark">Dark</button>
-      </div>
-    </section>
-  </section>
-</main>
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item nav-item-home">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 11.5L12 4l8 7.5v7.5a1 1 0 0 1-1 1h-4.5a1 1 0 0 1-1-1v-4h-3a1 1 0 0 0-1 1v3h-4.5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="nav-label">Home</span>
-  </a>
-  <a href="learn.html" class="nav-item nav-item-learn">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M6 4.5h9a2 2 0 0 1 2 2v11a0.5 0.5 0 0 1-0.8 0.4L13 15.5l-3.2 2.4A0.5 0.5 0 0 1 9 17.5v-13a0.5 0.5 0 0 1 0.5-0.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="nav-label">Learn</span>
-  </a>
-  <a href="reflect.html" class="nav-item nav-item-reflect">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M5 5.5h14v11a1 1 0 0 1-1 1H9.5L7 19.5v-2H6a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="nav-label">Reflect</span>
-  </a>
-  <button class="nav-item nav-item-settings" type="button" onclick="openSettings()">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm8 2.5a1 1 0 0 0-.76-.97l-1.33-.36a5.9 5.9 0 0 0-.58-1.39l.77-1.17a1 1 0 0 0-.12-1.26l-1.24-1.24a1 1 0 0 0-1.26-.12l-1.17.77a5.9 5.9 0 0 0-1.39-.58l-.36-1.33A1 1 0 0 0 12 3.5h-1.75a1 1 0 0 0-.97.76l-.36 1.33a5.9 5.9 0 0 0-1.39.58l-1.17-.77a1 1 0 0 0-1.26.12L3.86 6.86a1 1 0 0 0-.12 1.26l.77 1.17a5.9 5.9 0 0 0-.58 1.39l-1.33.36A1 1 0 0 0 2.5 12v1.75a1 1 0 0 0 .76.97l1.33.36c.13.49.33.96.58 1.39l-.77 1.17a1 1 0 0 0 .12 1.26l1.24 1.24a1 1 0 0 0 1.26.12l1.17-.77c.43.25.9.45 1.39.58l.36 1.33a1 1 0 0 0 .97.76H12a1 1 0 0 0 .97-.76l.36-1.33c.49-.13.96-.33 1.39-.58l1.17.77a1 1 0 0 0 1.26-.12l1.24-1.24a1 1 0 0 0 .12-1.26l-.77-1.17c.25-.43.45-.9.58-1.39l1.33-.36a1 1 0 0 0 .76-.97z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="nav-label">Settings</span>
-  </button>
-</nav>
+        <!-- Theme card (visual only for now) -->
+        <article class="card">
+          <p class="section-label">Theme</p>
+          <h2 class="card-title">Appearance (coming soon)</h2>
+          <p class="card-body-text">
+            Light / dark mode toggle and cozy reading options will live here.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Bottom nav -->
+    <div class="bottom-nav-wrapper">
+      <nav class="bottom-nav">
+        <a class="nav-item" href="index.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 11.5L12 4l8 7.5v7.5a1 1 0 0 1-1 1h-4.5a1 1 0 0 1-1-1v-4h-3a1 1 0 0 0-1 1v3H5a1 1 0 0 1-1-1z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="nav-label">Home</span>
+        </a>
+
+        <a class="nav-item" href="learn.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 4.5h9a2 2 0 0 1 2 2v11a0.5 0.5 0 0 1-0.8 0.4L13 15.5l-3.2 2.4A0.5 0.5 0 0 1 9 17.5v-13a0.5 0.5 0 0 1 0.5-0.5z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="nav-label">Learn</span>
+        </a>
+
+        <a class="nav-item" href="reflect.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M5 5.5h14v11a1 1 0 0 1-1 1H9.5L7 19.5v-2H6a1 1 0 0 1-1-1z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="nav-label">Reflect</span>
+        </a>
+
+        <a class="nav-item nav-item-active" href="settings.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm8 2.5a1 1 0 0 0-.76-.97l-1.33-.36a5.9 5.9 0 0 0-.58-1.39l.77-1.17a1 1 0 0 0-.12-1.26l-1.24-1.24a1 1 0 0 0-1.26-.12l-1.17.77a5.9 5.9 0 0 0-1.39-.58l-.36-1.33A1 1 0 0 0 12 3.5h-1.75a1 1 0 0 0-.97.76l-.36 1.33a5.9 5.9 0 0 0-1.39.58l-1.17-.77a1 1 0 0 0-1.26.12L3.86 6.86a1 1 0 0 0-.12 1.26l.77 1.17a5.9 5.9 0 0 0-.58 1.39l-1.33.36A1 1 0 0 0 2.5 12v1.75a1 1 0 0 0 .76.97l1.33.36c.13.49.33.96.58 1.39l-.77 1.17a1 1 0 0 0 .12 1.26l1.24 1.24a1 1 0 0 0 1.26.12l1.17-.77c.43.25.9.45 1.39.58l.36 1.33a1 1 0 0 0 .97.76H12a1 1 0 0 0 .97-.76l.36-1.33c.49-.13.96-.33 1.39-.58l1.17.77a1 1 0 0 0 1.26-.12l1.24-1.24a1 1 0 0 0 .12-1.26l-.77-1.17c.25-.43.45-.9.58-1.39l1.33-.36a1 1 0 0 0 .76-.97z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="nav-label">Settings</span>
+        </a>
+      </nav>
+    </div>
   </div>
-  <script src="app.js"></script>
 </body>
 </html>
