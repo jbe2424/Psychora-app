@@ -10,19 +10,19 @@
 <body>
   <div class="app-shell">
     <main>
-      <!-- Header -->
+      <!-- SAME HEADER AS HOME -->
       <header class="app-header">
         <div class="app-title-row">
           <div class="app-title-block">
             <h1 class="app-title">Psychora</h1>
             <p class="app-tagline">Intro to psychology</p>
           </div>
-          <div class="app-chip">Learn · key concepts</div>
+          <div class="app-chip">Study concepts</div>
         </div>
       </header>
 
       <section class="content">
-        <!-- Page title -->
+        <!-- Overview card -->
         <article class="card card-primary">
           <h2 class="page-title">Learn</h2>
           <p class="page-subtitle">Concepts by chapter.</p>
@@ -37,11 +37,37 @@
           </div>
 
           <p class="card-body-text">
-            Browse concepts by chapter. (Later this will reflect your imported terms.)
+            This is your library of terms. Later, search and add will actually work;
+            for now they show the design.
           </p>
         </article>
 
-        <!-- Example chapter: Learning -->
+        <!-- NEW CONCEPTS (0–1 reviews) -->
+        <article class="card card-accent-mauve">
+          <p class="section-label">New concepts</p>
+          <h3 class="card-title">Concepts seen 0–1 times.</h3>
+          <p class="card-body-text">
+            These are the ideas that are still fresh. As you review more often,
+            they will still appear in their chapters below.
+          </p>
+
+          <!-- Sample items; later this will be driven by real data -->
+          <div class="list-item">
+            <span class="list-item-title">Encoding</span>
+            <span class="list-item-meta">
+              Memory · Reviewed 0× · Teach-back X · Reflections 0
+            </span>
+          </div>
+
+          <div class="list-item">
+            <span class="list-item-title">Cognitive dissonance</span>
+            <span class="list-item-meta">
+              Learning · Reviewed once · Teach-back ✔ · Reflections 1
+            </span>
+          </div>
+        </article>
+
+        <!-- Chapter: Learning -->
         <article class="card card-accent-mauve">
           <p class="section-label">Chapter</p>
           <h3 class="card-title">Learning</h3>
@@ -61,7 +87,7 @@
           </div>
         </article>
 
-        <!-- Example chapter: Memory -->
+        <!-- Chapter: Memory -->
         <article class="card card-accent-green">
           <p class="section-label">Chapter</p>
           <h3 class="card-title">Memory</h3>
@@ -76,7 +102,7 @@
       </section>
     </main>
 
-    <!-- Bottom nav -->
+    <!-- SAME BOTTOM NAV AS HOME, WITH LEARN ACTIVE -->
     <div class="bottom-nav-wrapper">
       <nav class="bottom-nav">
         <a class="nav-item" href="index.html">
